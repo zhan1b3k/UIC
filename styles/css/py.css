@@ -1,0 +1,220 @@
+body{
+    background-color: ghostwhite;
+}
+*{
+  text-decoration:none;
+  margin:0;
+  padding:0;
+}
+
+header{
+  width:auto;  
+  height:60px;
+  background-color:rgb(37, 37, 37);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 2);
+  list-style-type:none;
+}
+.brand{
+    font-family:sans-serif;
+    font-size:35px;
+    color:white;
+    font-weight:700;
+    margin-right:400px;
+    cursor: pointer;
+}
+.brand span{
+    color:white;
+    font-size:30px; 
+}
+.navbar{
+ height:inherit;
+ display:flex;
+ justify-content:space-evenly;
+ align-items:center;
+ 
+}
+.navbar-menu li{
+   display: inline-block;
+   font-family: "Roboto", sans-serif;
+   font-weight:400; 
+   font-size:20px;
+   margin-right:25px;
+   cursor: pointer;
+   color:black;
+   list-style-type:none;
+}
+.navbar-menu li:hover{
+ color:orange;
+}
+.navbar-menu li a{
+    color: white;
+}
+.navbar-wrap{
+ display: flex;
+ flex-flow:row nowrap;
+ align-items:center;
+}
+.loginlink a{
+    color:white;
+    transition:.5s ;
+    font-family: "Roboto", sans-serif;
+    font-weight:400;
+    font-size:20px;
+    border: 1px solid ghostwhite;
+    margin-left:200px;
+    text-decoration: none; 
+    padding:10px 20px 10px 20px;
+}
+.loginlink a:hover{
+    color:black;
+    background-color:whitesmoke;    
+    border: 1px solid white;
+}
+@media (max-width: 768px) {
+    .menu__icon {
+      display: block;
+      width: 30px;
+      height: 18px;
+      z-index: 5;
+      cursor: pointer;
+      position: relative;
+    }
+    .menu__icon.active span {
+      transform: scale(0);
+    }
+    .menu__icon.active span:first-child {
+      transform: rotate(-45deg);
+      top: calc(50% - 1px);
+    }
+    .menu__icon.active span:last-child {
+      transform: rotate(45deg);
+      bottom: calc(50% - 1px);
+    }
+    .menu__icon span {
+      position: absolute;
+      width: 100%;
+      top: calc(50% - 1px);
+      left: 0;
+      height: 2px;
+      background-color: #fff;
+      transition: 0.2s all;
+    }
+    .menu__icon span:first-child {
+      top: 0;
+    }
+    .menu__icon span:last-child {
+      bottom: 0;
+      top: auto;
+    }
+  }
+.container{
+    display: flex;
+    width:100%;
+    margin-top:30px;
+}
+.section{
+    flex-basis:77.77%;
+    height: 100vh;
+    order:2;
+}
+.section__text{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    max-width:800px;
+    list-style-type:armenian;
+}
+.section__text h1{
+    margin:20px 0 15px 0;
+}
+.section__text-ul{
+    padding:30px 0 30px 20px;
+}
+.section-btn a{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:30px;
+    width:200px;
+    border:1.5px solid black;
+    color:white;
+    height:50px;
+    background-color:black;
+    cursor: pointer;
+    text-align:center;
+    font-size:22px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition:0.5s;
+}
+.section-btn a{
+    color:white;
+}
+.section-btn a:hover{
+    transition:0.5s;
+    background-color:white;
+    color:black;
+    border:1.5px solid black;
+}
+
+.sidebar{
+    flex-basis:22.23%;
+    background-color:rgba(37, 37, 37, alpha);
+    top:0;
+    height:40vh;
+    order:1;
+    margin-left:30px;
+    list-style-type:none;
+}
+.sidebar-maintitle{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin:0 0 20px 0;
+    font-size:20px;
+}
+.sidebar-navigation-li li{
+    font-family:sans-serif;
+    width: 225px;
+    height:39px;
+    border:2px solid ghostwhite;
+    text-align:left;
+    display:flex;
+    justify-content:left;
+    align-items:center;
+    cursor: pointer;
+    color:white;
+}
+.sidebar-navigation-li li a{
+    color:black;
+}
+
+.sidebar-navigation-li li:hover{
+    opacity:0.7;
+    background-color:gray;
+}
+.sidebar-navigation-li li a{
+    font-size:13px;
+    list-style-type:none;
+}
+.sidebar-navigation-li li a:nth-child(){
+color:white;
+}
+.footer {
+    margin-top:200px;
+    background-color:rgb(37, 37, 37);
+    width:auto;
+    height:250px;
+}
+.footer-design {
+    display:flex;
+    justify-content:center;
+}
+.footer-text{
+    color:white;
+    margin:49px 231px;
+    font-size:15px;
+    font-family: "Poppins", sans-serif;
+}
+.footer-text .items{
+    text-align:center;
+    margin-top:104px;
+    word-spacing:3px;
+}
+.footer-social_media {
+}

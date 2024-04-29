@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/css/login.css">
+    <title>Login</title>
+</head>
+<body>
+   <form action="" class="loginform" id="add-form">       
+    <div class="login__title">
+                    <h1>Вход</h1>
+                </div>
+                <div action="" class="for">
+                    <div class="input-box">
+                        <input data-required="true" type="text" class="style-input" placeholder="Логин">
+                    </div>
+                </div>
+                <div action="" class="for">
+                    <div class="input-box">
+                        <input data-required="true"  data-min-Length="20" type="text" class="style-input" placeholder="Пароль">
+                    </div>
+                </div>
+                 <div class="login-forgot">
+                    <label for="" class="lgf"><input type="checkbox">Запомнить меня</label>
+                    <a href="#">Забыл пароль</a>
+                </div>
+
+                <button class="btn-form" type="submit" >
+                    Войти
+                </button>    
+                <p class="sub">Нет аккаунта?</p>
+                <div class="not-acc">
+                    <button class="acc"><label for="" class="label1">Регистрация</label></button>
+                </div>
+    </form>
+    <form action="" class="loginform1">       
+        <div class="login__title">
+                        <h1>Регистрация</h1>
+                    </div>
+                    <div action="" class="for">
+                        <input type="text" class="style-input" placeholder=" ">
+                        <label for="" class="label">Почта</label>
+                    </div>
+                    <div action="" class="for">
+                        <input type="text" class="style-input" placeholder=" ">
+                        <label for="" class="label">Логин</label>
+                    </div>
+
+                    <div action="" class="for">
+                        <input type="password" class="style-input" placeholder=" ">
+                        <label for="" class="label">Пароль</label>
+                    </div>
+                      <button class="btn-form1">
+                        Регистрация
+                    </button>    
+                    <p class="sub">Есть аккаунт?</p>
+                    <div class="not-acc">
+                        <button class="acc1"><label for="" class="label1">Войти</label></button>
+                    </div>
+        </form>
+        <script>
+            document.getElementById('add-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+    
+                fetch('/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = '/profile.html';
+                    } else {
+                        throw new Error('Неверное имя пользователя или пароль');
+                    }
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
+            });
+            
+        </script>
+</body>
+</html>
