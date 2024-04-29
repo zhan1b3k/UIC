@@ -60,6 +60,21 @@
                     </div>
         </form>
         <script>
+            const btn = document.querySelector('.acc')
+            const btn2 = document.querySelector('.acc1')
+            const form = document.querySelector('.loginform')
+            const form1 = document.querySelector('.loginform1')
+
+            btn.addEventListener('click',()=>{
+                form.style.cssText.display = 'none'
+                form1.style.cssText.display = 'block'
+            })
+            btn2.addEventListener('click',()=>{
+                form.style.cssText.display = 'block'
+                form1.style.cssText.display = 'none'
+            })
+
+
             document.getElementById('add-form').addEventListener('submit', function(event) {
                 event.preventDefault();
     
