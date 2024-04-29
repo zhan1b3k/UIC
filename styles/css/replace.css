@@ -559,6 +559,13 @@ main {
   }
 }
 @media (max-width: 768px) {
+  .first-section{
+    margin:0;
+    background-image:url(img/top-view-unrecognizable-hacker-performing-cyberattack-night.jpg);
+    
+   background-size:cover; 
+   background-repeat: no-repeat;
+  }
   .hidden-link {
     display: block;
   }
